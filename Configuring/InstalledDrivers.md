@@ -7,9 +7,15 @@
 Важные драйвера
 
 - ApfsDriverLoader
+
 - AptioMemoryFix
+
+  > Начиная с ревизии Clover 4978 драйвера AptioMemoryFix не входит в состав загрузчика Clover, но его можно скачать самостоятельно с официального репозитория: https://github.com/acidanthera/AptioFixPkg
+
 - FSInject
+
 - SMCHelper
+
 - VBoxHfs
 
 Не важные драйвера, но их установка никак не навредит (по крайней мере не навредила в моем случае)
