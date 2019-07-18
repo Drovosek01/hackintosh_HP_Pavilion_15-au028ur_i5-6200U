@@ -1,4 +1,4 @@
-# Что я сделал при установки Hackintosh на ноутбук
+# Что я делал при установки Hackintosh на ноутбук
 
 Эту инструкцию я писал для себя, чтобы после переустановки не вспоминать что и как делать. Инструкция написана после установки macOS Mojave 10.14.5. на ноутбук HP Pavilion 15-au028ur.
 
@@ -37,7 +37,7 @@
 1. Стандартная установка macOS
 2. Разбить диск на разделы сейчас или потом ?????
 
-## Настройка Hackintosh
+## Настройка macOS
 
 1. В терминале вводим `sudo spctl --master-disable`, чтобы отключить Gatekeeper и устанавливать приложениея не только из MacAppstore
 2. Включить TRIM для SSD дисков с помощью команды в терминале `sudo trimforce enable`
@@ -91,52 +91,26 @@
 
 ### Программы первой необходимости
 
-1. Clover Bootloader
-2. CloverConfigurator
-3. Plist Edit Pro
+Если у вас hackintosh, а не настоящий Apple компьютер, то рекомендую, чтобы эти программы всегда были установлены в вашей системе. Эти программы входят в состав программ из списка Hackintosh Tools, но они являются наиболее необходимыми.
+
+1. Clover Bootloader https://sourceforge.net/projects/cloverefiboot/
+2. CloverConfigurator https://mackie100projects.altervista.org/download-clover-configurator/
+3. Plist Edit Pro https://www.fatcatsoftware.com/plisteditpro/
 
 ### Hackintosh программы
 
-1. KextUtility http://cvad-mac.narod.ru/index/0-4
-2. KextBeast 2.0.2 https://www.tonymacx86.com/resources/kextbeast-2-0-2.399/
-3. MaciASL by Rehabman https://bitbucket.org/RehabMan/os-x-maciasl-patchmatic/downloads/
-4. MaciASL from github https://github.com/acidanthera/MaciASL
-5. Clover Theme Manager https://www.insanelymac.com/forum/topic/302674-clover-theme-manager/
-6. IORegistryExplorer 2.1 https://github.com/vulgo/IORegistryExplorer
-7. DPCI Manager https://sourceforge.net/projects/dpcimanager/
-8. EFI Mounter v3 https://www.tonymacx86.com/resources/efi-mounter-v3.280/
-9. Intel Power Gadget https://software.intel.com/en-us/articles/intel-power-gadget
-10. ShowHiddenFiles https://gotoes.org/sales/ShowHiddenFilesMacOSX/How_To_Show_Hidden_Files.php
-11. Punto Switcher https://yandex.ru/soft/punto/
-12. ML Switcher https://apps.apple.com/app/mlswitcher/id422365812
-13. Hackintool https://www.tonymacx86.com/threads/release-hackintool-v2-6-6.254559/#post-1764779
-14. (Old) Chameleon Wizard https://mac.softpedia.com/get/Utilities/Chameleon-Wizard.shtml
-15. (Old) Kext Wizard https://mac.softpedia.com/get/Utilities/Kext-Wizard.shtml
+Эти программы программы используются в основном для настройки Hackintosh, как рабочий инструмент macOS они вам вряд ли пригодятся. Часть этих программ желательно оставить в вашем hackintosh на тот случай, если что-то пойдет не так и система начнет "выпендриваться", ведь не все могут определить насколько правильно и насколько полноценно настроен ваш hackintosh.
+
+[Hackintosh tools](/ProgramsListHackintoshTools.md)
 
 ### Программы-фреймворки для работы других программ
 
-1. Java https://www.java.com/
-2. Python https://www.python.org/
-3. .Net Framework https://dotnet.microsoft.com/download
-4. Nodejs https://nodejs.org/
-5. Adobe Flash Player - сейчас почти нигде не нужен
+Эти программы нужны для работы других программ или скриптов. В основном это используется разными разработчиками. Если они вам понадобятся, то вы и без этого списка будете знать, какая программа вам нужны.
+
+[Other Software](/ProgramsList/OtherSoftware.md)
 
 ### Устанавливаемое ПО
 
-1. Google Chrome <https://www.google.ru/chrome/>
-2. Keka <https://www.keka.io/>
-3. Sublimetext <http://www.sublimetext.com/>
-4. Screenflow
-5. VLC Media Player <https://www.videolan.org/vlc/>
-6. Git Bash <https://git-scm.com/>
-8. Typora <https://typora.io/>
-9. Transmission https://transmissionbt.com/
-10. Office
-11. AppCleaner https://freemacsoft.net/appcleaner/
-12. XCode https://developer.apple.com/download/more/
-13. Folx
-14. Firefox <https://www.mozilla.org/ru/firefox/new/>
-15. XnConvert <https://www.xnview.com/en/xnconvert/>
-16. XnView <https://www.xnview.com/>
-17. Adobe Photoshop
-18. HashTab http://implbits.com/products/hashtab/
+ываыва
+
+[Regular Software](/ProgramsList/RegularSoftware.md)
