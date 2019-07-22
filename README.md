@@ -128,6 +128,19 @@
 
 * https://bulkin.me/notes/2233
 * http://osxh.ru/terminal/command/pmset
+* https://www.insanelymac.com/forum/topic/299721-sleep-hibernation-how-it-works-and-how-to-use/
+
+Так же у меня включен флаг `HibernationFixup`, я не экспериментировал с тем, что будет, если его отключить.
+
+```xml
+<key>Boot</key>
+<dict>
+  <key>HibernationFixup</key>
+  <true/>
+</dict>
+```
+
+Так же [vit9696 рекомендует](https://www.insanelymac.com/forum/topic/304530-clover-change-explanations/?do=findComment&comment=2617018) всегда включать флаг RtcHibernateAware, но у меня он выключен. Я не экпериментировал с его включением.
 
 ## Настройка DSDT
 
