@@ -63,6 +63,10 @@
 * HDMI
 * Дисковод (он распознается в macOS и его можно даже открыть нажав пару кнопок в интерфейсе, но у меня нет DVD/CD дисков, чтобы проверить работу дисковода)
 
+## Предустановочная подготовка
+
+// TODO
+
 ## Настройка BIOS / UEFI
 
 Эти параметры очень важны
@@ -130,8 +134,6 @@
 * http://osxh.ru/terminal/command/pmset
 * https://www.insanelymac.com/forum/topic/299721-sleep-hibernation-how-it-works-and-how-to-use/
 
-Так же у меня включен флаг `HibernationFixup`, я не экспериментировал с тем, что будет, если его отключить.
-
 ```xml
 <key>Boot</key>
 <dict>
@@ -140,7 +142,15 @@
 </dict>
 ```
 
-Так же [vit9696 рекомендует](https://www.insanelymac.com/forum/topic/304530-clover-change-explanations/?do=findComment&comment=2617018) всегда включать флаг RtcHibernateAware, но у меня он выключен. Я не экпериментировал с его включением.
+Так же [vit9696 рекомендует](https://www.insanelymac.com/forum/topic/304530-clover-change-explanations/?do=findComment&comment=2617018) всегда включать флаг `RtcHibernateAware`, но у меня все нормально работает и с выключенным пунктом. Есть так же еще разные параметры в конфиге, позволяющие настроить гибернцаию/сон, вы можете узнать о них в бесплатной книге-учебнике Clover цвета хаки.
+
+### Установка Windows
+
+[Описание нюансов установки Windows рядом с Hackintosh](/AboutWindows/InstallWindows.md)
+
+### Настройка Windows
+
+// TODO
 
 ## Настройка DSDT
 
