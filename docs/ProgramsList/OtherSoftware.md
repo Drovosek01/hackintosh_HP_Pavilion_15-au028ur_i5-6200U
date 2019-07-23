@@ -9,3 +9,9 @@
 5. Nodejs https://nodejs.org/
 6. Adobe Flash Player - сейчас почти нигде не нужен
 7. Xcode https://developer.apple.com/download/more/
+
+### Полезные утилиты
+
+Программы, которые не относятся ни к инструментам макинтоша, не к минифреймворкам, но могут быть полезны
+
+1. Camera Control https://phoboslab.org/log/2009/07/uvc-camera-control-for-mac-os-x

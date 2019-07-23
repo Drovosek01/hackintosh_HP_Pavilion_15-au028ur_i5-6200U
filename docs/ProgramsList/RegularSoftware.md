@@ -18,3 +18,5 @@
 12. XnConvert <https://www.xnview.com/en/xnconvert/>
 13. XnView <https://www.xnview.com/>
 14. Adobe Photoshop
+
+Так же огромный список с кратким описанием программ можно найти в репозитории [awesome-mac](https://github.com/jaywcjlove/awesome-mac)
