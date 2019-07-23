@@ -6,7 +6,7 @@
 
 1. Перейдите в GUI меню загрузчика Clover и нажмите F4 или Fn+F4, чтобы сохранились оригинальные ACPI таблицы вашего компьютера
 2. Загрузитесь в MacOSX, примонтируйте ESP и перейдите в `/EFI/CLOVER/ACPI/original` и убедитесь, что там есть файлы с расщирением .aml и скопируйте папку origianl куда-нибудь
-3. Скачайте [MaciASL](/ProgramsList/HackintoshTools.md)
+3. Скачайте [MaciASL](/docs/ProgramsList/HackintoshTools.md)
 4. Создайте новую папку и скопируйте в нее файл DSDT.aml
 5. Действуя инструкции на [osxpc](https://osxpc.ru/faq/acpi-manual/) или на [tonymacx86](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/) преобразуйте файл DSDT.aml в файл DSDT.dsl
 6. Откройте файл DSDT.dsl с помощью MaciASL и нажмите кнопку "Скомпилировать" в верху окна программы
