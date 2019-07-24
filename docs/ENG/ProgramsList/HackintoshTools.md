@@ -1,8 +1,8 @@
-### Hackintosh программы
+### Hackintosh programs
 
-Эти программы программы используются в основном для настройки Hackintosh, как рабочий инструмент macOS они вам вряд ли пригодятся. Часть этих программ желательно оставить в вашем hackintosh на тот случай, если что-то пойдет не так и система начнет "выпендриваться", ведь не все могут определить насколько правильно и насколько полноценно настроен ваш hackintosh.
+These programs are used mainly for configuring Hackintosh, as a working macOS tool, they are hardly useful to you. It is advisable to leave some of these programs in your hackintosh in case something goes wrong and the system starts to show off, because not everyone can determine how correctly and how fully your hackintosh is configured.
 
-Я отсортировал программы в порядке важности. Сначала идут самые важные, на мой взгляд, программы, а потом менее важные. Так же в подпунктах я буду указывать альтернативные программы.
+I sorted the programs in order of importance. First are the most important, in my opinion, the program, and then less important. Also in subparagraphs I will indicate alternative programs.
 
 1. Clover Bootloader https://sourceforge.net/projects/cloverefiboot/
 2. CloverConfigurator https://mackie100projects.altervista.org/download-clover-configurator/
