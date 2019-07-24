@@ -1,8 +1,8 @@
-### Используемые кексты
+### Used kexts
 
-Кексты (kernel extensions) это как в Windows драйвера. В этом списке все кексты важны и все они лежат в `/CLOVER/kexts/Other`, но кекст для работы тачпада и клавиатуры (VoodooPS2Trackpad), мне пришлось сначала установить с помощью программы KextUtility, потом удалить из /S/L/E и поместить в `/CLOVER/kexts/Other`, иначе тачпад не распознавался и не работали жесты.
+Kexts (kernel extensions) is a Windows driver. In this list, all the kexts are important and they all lie in `/CLOVER/kexts/Other`, but the kext for the touchpad and keyboard (VoodooPS2Trackpad), I had to first install using KextUtility, then remove from /S/L/E and put in `/CLOVER/kexts/Other`, otherwise the touchpad was not recognized and gestures did not work.
 
-Естественно для каждой конфигурации компьютера нужен свой набор кекстов и не только кексты влияют на работоспособность системы, но еще и разнообразные патчи в конфиге, DSDT и т.д.
+Naturally for each configuration of the computer you need a set of kexts and not only the texts affect the performance of the system, but also a variety of patches in the config, DSDT, etc.
 
 * FakeSMC https://sourceforge.net/projects/hwsensors3.hwsensors.p/
 * Lilu https://github.com/acidanthera/Lilu
