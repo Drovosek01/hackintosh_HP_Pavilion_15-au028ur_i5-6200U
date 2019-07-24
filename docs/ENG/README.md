@@ -7,26 +7,26 @@ I wrote this instruction for myself, so that after reinstallation I don’t reme
 ## HP Pavilion 15-au028ur Notebook Specifications
 
 * CPU
-    * Intel Core i5-6200U 2.3GHz, Turbobust 2.8GHz, Skylake
+  * Intel Core i5-6200U 2.3GHz, Turboboost 2.8GHz, Skylake
 * Video card
-    * Intel HD Graphics 520
-      * Nvidia Geforce 940MX
+  * Intel HD Graphics 520
+    * Nvidia Geforce 940MX
 * RAM
-    * DDR4 2133MHz
+  * DDR4 2133MHz
 * Motherboard
-    * HP 820C v82.39
+  * HP 820C v82.39
 * BIOS
-    * HP Insyde F.52
+  * HP Insyde F.52
 * Sound adapter
-    * Realtek ALC 295
+  * Realtek ALC 295
 * Bluetooth
-    * Realtek Bluetooth 4.0 Adapter
+  * Realtek Bluetooth 4.0 Adapter
 * Wifi
-    * Realtek RTL8723BE 802.11 bgn Wi-Fi Adapter
+  * Realtek RTL8723BE 802.11 bgn Wi-Fi Adapter
 * Ethernet
-    * Realtek RTL8139/810x Fast Ethernet Adapter
+  * Realtek RTL8139/810x Fast Ethernet Adapter
 * Card Reader
-    * Realtek PCI-E Card Reader
+  * Realtek PCI-E Card Reader
 
 ## What happened and did not work "revive"
 
@@ -81,7 +81,7 @@ If you have only 1 disk (1 HDD or 1 SSD) on which Windows is already installed a
 * Buy a separate disk and install MacOSX on it
 * If your disk is marked up in GPT, then you can separate the partition in Windows and then install MacOSX on it
     * You can find out how marked up is in Windows, to do this, open "Disk Management" (right-click on start), then open the properties of the disk (right-click on the disk itself, and not on sections where it says "Disk 0" or "Disk 1" ), open the "Tom" tab and look at the section style there. If the section style "Table with GUID sections", then everything is fine
-      * You can separate or create a partition in Windows in the same Disk Management program. To do this, right-click on the partition from which you will separate another partition and in the context menu, click Compress and then select how many megabytes to compress the selected partition. Accordingly, everything that is larger than these megabytes will be formed into a new unallocated domain, which you can partition into any file system, but better in FAT32. Then, during MacOSX installation, you need to select this partition in Disk Utility, format it in APFA or HFS + (it depends on the version of MacOSX you are installing) and select MacrosX when installing MacOSX
+      * You can separate or create a partition in Windows in the same Disk Management program. To do this, right-click on the partition from which you will separate another partition and in the context menu, click Compress and then select how many megabytes to compress the selected partition. Accordingly, everything that is larger than these megabytes will be formed into a new unallocated domain, which you can partition into any file system, but better in FAT32. Then, during MacOSX installation, you need to select this partition in Disk Utility, format it in APFA or HFS + (it depends on the version of MacOSX you are installing) and select MacOSX when installing MacOSX
 * If your disk is marked in MBR, then you will need to convert it to GPT, or erase (format) in Disk Utility during MacOSX installation
     * You can find out how marked up is in Windows, to do this, open "Disk Management" (right-click on start), then open the properties of the disk (right-click on the disk itself, and not on sections where it says "Disk 0" or "Disk 1" ), open the "Tom" tab and look at the section style there. If the style of the "MBR" section, then it's bad
     * To convert MBR to GPT in Windows without losing data, you need to use third-party programs. As far as I know, these programs "Paragon Hard Disk Manager", "AOMEI Partition Assistant" and "MiniTool Partition Wizard" and, perhaps, any other utilities allow you to convert markup from MBR to GPT without data loss. Unfortunately, only the paid versions of these programs allow you to convert. Personally, I used the "MiniTool Partition Wizard" and everything was converted without data loss. After switching off, you need to switch the boot mode from CSM (Legacy) to UEFI in the BIOS/UEFI settings.
@@ -117,7 +117,7 @@ These parameters are very important.
    * We are waiting for the progress bar of the image recording in BDU to end
    * Done
 
-There is also a guide with pictures in a pdf file. This mini manual is called "BDU_FAQ_STARCOM" and [is attached to this](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post- 557498) post.
+There is also a guide with pictures in a pdf file. This mini manual is called "BDU_FAQ_STARCOM" and [is attached to this](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post-557498) post.
 
 ## Set up a bootable flash drive
 

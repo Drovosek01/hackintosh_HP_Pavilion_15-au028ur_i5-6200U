@@ -7,7 +7,7 @@
 ## Характеристики ноутбука HP Pavilion 15-au028ur
 
 * Процессор
-  * Intel Core i5-6200U 2.3GHz, Turbobust 2.8GHz, Skylake
+  * Intel Core i5-6200U 2.3GHz, Turboboost 2.8GHz, Skylake
 * Видеокарта
   * Intel HD Graphics 520
   * Nvidia Geforce 940MX
@@ -34,7 +34,7 @@
 
 * Графика Intel HD Graphics 520
 * Графическое ускорение Inte Quick Sync
-* TurboBust
+* TurboBoost
 * SpeedStep
 * Регулировка яркости клавишами Fn+F2 / Fn+F3, как уменьшение и увеличение яркости соответственно 
   (так же как и в Windows 10, я специально сделал их активацию только вместе с Fn)
