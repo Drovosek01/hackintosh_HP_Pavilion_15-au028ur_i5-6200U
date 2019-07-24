@@ -1,21 +1,21 @@
-### Используемые драйвера
+### Driver to be used
 
-Драйвера должны быть в папке `/CLOVER/drivers/UEFI`, если у вас Clover ревизии 4978 и выше или `/CLOVER/drivers64UEFI`, если у вас Clover ревизии 4972 и ниже. Некоторые драйвера обязательны для использования (например SMCHelper или FSInject и другие), а без некоторых можно обойтись (например драйвера для управления курсором мыши в GUI загрузчика). Описание большей части драйверов вы можете найти в книги "[Clover цвета хаки](https://sourceforge.net/projects/cloverefiboot/files/Documents/)", или [здесь](https://vk.com/topic-12954845_40124589). Так же с некоторыми кекстами могут предоставляться собственные драйвера, которые могут использоваться вместо существующих или дополнять их.
+Drivers must be in the `/CLOVER/drivers/UEFI` folder if you have Clover revision 4978 and above or `/CLOVER/drivers64UEFI` if you have Clover revision 4972 and below. Some drivers are required (for example, SMS Helper or FSInject and others), and some can be dispensed with (for example, drivers to control the mouse cursor in the bootloader GUI). The description of most of the drivers you can find in the book "[Clover of Hacky Color](https://sourceforge.net/projects/cloverefiboot/files/Documents/)", or [here](https://vk.com/topic-12954845_40124589). Also with some of the text can be provided with their own drivers that can be used instead of existing or complement them.
 
-#### Эти драйвера я использую в своем макинтош ноутбуке
+#### These are the drivers I use in my Mac laptop
 
-Важные драйвера
+Important drivers
 
 - ApfsDriverLoader
 - AptioMemoryFix
 
-  > Начиная с ревизии Clover 4978 драйвер AptioMemoryFix не входит в состав загрузчика Clover, но его можно скачать самостоятельно с официального репозитория: https://github.com/acidanthera/AptioFixPkg или использовать один из OsxAptioFix3Drv.efi, OsxAptioFix2Drv.efi, OsxAptioFixDrv.efi и в последнюю очередь OsxLowMemFix.efi, но я все же рекомендую использовать исключительно AptioMemoryFix
+  > Since the Clover 4978 revision, the AptioMemoryFix driver is not included in the Clover loader, but you can download it yourself from the official repository: https://github.com/acidanthera/AptioFixPkg or use one of the OsxAptioFix3Drv.efi, OsxAptioFix2Drv.efi, OsxAptioFixDrv.efi and last but not least OsxLowMemFix.efi, but I still recommend using only AptioMemoryFix
 
 - FSInject
 - SMCHelper
 - VBoxHfs
 
-Не важные драйвера, но их установка никак не навредит (по крайней мере не навредила в моем случае)
+Not important drivers, but their installation does not hurt (at least not hurt in my case)
 
 - AudioDxe
 - DataHubDxe
