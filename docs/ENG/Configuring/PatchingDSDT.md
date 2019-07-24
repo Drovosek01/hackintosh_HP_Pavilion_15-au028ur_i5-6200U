@@ -1,22 +1,22 @@
-## Настройка DSDT
+## Configure DSDT
 
-С помощью применения патчей для файла DSDT, мне удалось заставить отображаться индикатор заряда батареи и включить регулировку яркости экрана с помощью клавиш Fn+F2 и Fn+F3.
+By applying patches to the DSDT file, I was able to make the battery indicator appear and enable screen brightness adjustment using the Fn+F2 and Fn+F3 keys.
 
-Сначала нужно извлечь .aml файлы, дизасемблировать их и исправить ошибки компиляции
+First you need to extract .aml files, disassemble them and fix compilation errors
 
-1. Перейдите в GUI меню загрузчика Clover и нажмите F4 или Fn+F4, чтобы сохранились оригинальные ACPI таблицы вашего компьютера
-2. Загрузитесь в MacOSX, примонтируйте ESP и перейдите в `/EFI/CLOVER/ACPI/original` и убедитесь, что там есть файлы с расширением .aml и скопируйте папку origianl куда-нибудь
-3. Скачайте [MaciASL](/docs/ProgramsList/HackintoshTools.md)
-4. Создайте новую папку и скопируйте в нее файл DSDT.aml
-5. Действуя инструкции на [osxpc](https://osxpc.ru/faq/acpi-manual/) или на [tonymacx86](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/) преобразуйте файл DSDT.aml в файл DSDT.dsl
-6. Откройте файл DSDT.dsl с помощью MaciASL и нажмите кнопку "Скомпилировать" в верху окна программы
-7. У вас появится маленькое окно внизу которого написано количество ошибок и предупреждений. Если ошибок 0, это замечательно. Если ошибки есть, найдите ее формулировку и гуглите. На предупреждения можно не обращать внимание
+1. Go to the clover bootloader GUI menu and press F4 or Fn+F4 to save the original ACPI tables of your computer
+2. Boot into OSX, mount the ESP and go to `/EFI/CLOVER/ACPI/original` and make sure there is a file with the extension .aml and copy the origianl folder somewhere
+3. Download [MaciASL](/docs/ProgramsList/HackintoshTools.md)
+4. Create a new folder and copy the DSDT file to it.aml
+5. Acting instructions on [osxpc](https://osxpc.ru/faq/acpi-manual/) or [tonymacx86](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/) convert the DSDT file.aml to DSDT file.dsl
+6. Open the DSDT file.dsl using MaciASL and click "Compile" at the top of the program window
+7. You will see a small window at the bottom of which is written the number of errors and warnings. If there are 0 errors, this is great. If there are errors, look for her wording and Google. You can ignore the warnings
 
 ------
 
-У меня не работала регулировка яркости с помощью клавиш Fn+F2 и Fn+F3 (да, я в BIOS/UEFI включил клавишу Fn, чтобы функциональные клавиши включались только вместе с Fn, а обычные клавиши F1-F12 работали без Fn), хотя в Системных настройках в пункте "Монитор" яркость регулировалось, но каждый раз заходить туда было бы глупо.
+I did not work brightness adjustment using the keys Fn+F2 and Fn+F3 (Yes, I BIOS/UEFI included the Fn key to function keys included only with Fn, and normal keys F1-F12 worked without Fn), although the System settings in the "Monitor" brightness was adjusted, but each time to go there would be stupid.
 
-Я узнал, что настроить регулировку яркости с помощью F клавиш можно с помощью кекста ApplePS2SmartTouchpad, либо с помощью патчей в DSDT. Я попробовал кекст ApplePS2SmartTouchpad, но мне он не понравился, т.к. по сравнению с VoodooPS2Trackpad он давал мне мало жестов. Я решил пропатчить DSDT, чтобы можно было регулировать яркость F клавишами. С помощью [этого гайда](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/), я узнал, что при нажатии клавиш Fn+F2/F3 в DSDT вызываются методы _Q10 и _Q11. Я нашел строчки на которые нужно заменить внутренности этих методов и сделал свой патч:
+I learned that to adjust the brightness with the F keys, you can use kext ApplePS2SmartTouchpad, either with patches to DSDT. I tried the appleps2smarttouchpad kext, but I didn't like it because it gave me few gestures compared to the VoodooPS2Trackpad. I decided to patch the DSDT to be able to adjust the brightness with F keys. With [this guide](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/)I found out that pressing Fn+F2/F3 DSDT methods _Q10 and _Q11. I found the lines to replace the insides of these methods and made my patch:
 
 ```c
 into method label _Q10 replace_content
@@ -33,25 +33,25 @@ Notify(\_SB.PCI0.LPCB.PS2M, 0x0286)\n
 end;
 ```
 
-Чтобы его применить нужно открыть файл DSDT.dsl с помощью MaciASL, вверху нажать кнопку "Патч" и в поле, в котором вы можете набирать текст, нужно вставить этот патч, а потом нажать применить. Скорее всего  за регулировку яркости у вас будут отвечать другие методы, а не _Q10 и _Q11, поэтому следуйте гайду от Rehabman, чтобы выяснить названия методов.
+To apply it, you need to open the DSDT file.dsl using MaciASL, at the top click "Patch" and in the field where you can type, you need to insert the patch, and then click apply. Most likely, you will be responsible for adjusting the brightness of other methods, and not _Q10 and _Q11, so follow the guide from Rehabman to find out the names of the methods.
 
-Так же [патчи от olderst](https://github.com/olderst/Keyboard-Patches) для клавиш регулировки яркости тоже аналогичным образом смогли включить регулировку яркости с помощью Fn+F2/F3
+Also [patches from olderst](https://github.com/olderst/Keyboard-Patches) for the brightness keys were also similarly able to enable brightness adjustment using Fn+F2/F3
 
 ------
 
-Так же у меня не отображался индикатор заряда батареи справа вверху. Я узнал, что это можно исправить только с помощью патча DSDT и использования дополнительных кекстов.
+Also, I did not display the battery indicator at the top right. I learned that this can only be fixed with a DSDT patch and the use of additional kexts.
 
-Для начала попробуйте использовать только кекст для батареи без применения патчей для DSDT. Есть несколько кекстов, позволяющих отобразить индикатор заряда батареи. Вряд ли они заработают без применения патчей, но стоит попробовать.
+For the beginning try to use only kekst for the battery without the use of patches for DSDT. There are several kexts that allow you to display the battery indicator. It is unlikely that they will work without the use of patches, but it's worth a try.
 
-Кексты для отображения заряда батареи:
+Kexts to display battery:
 
 - [ACPIBatteryManager](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/)
 - [VoodooBatterySMC + FakeSMC](https://sourceforge.net/projects/hwsensors3.hwsensors.p/)
 - [SMCBatteryManager + VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases)
 
-Так же не забывайте читать инструкцию и/или README файлы с этими кекстами, чтобы знать нюансы их установки и настройки. Кексты FakeSMC и VirtualSMC не совместимы и нужно использовать только 1 из них. При использовании кекста VirtualSMC так же нужно удалить драйвер SMCHelper.efi и на его место переместить драйвер VirtualSMC.efi. Кексты ACPIBatteryManager и VoodooBatterySMC и SMCBatteryManager скорее всего тоже не совместимы между собой. Все кексты нужно помещать в папку `/EFI/CLOVER/kexts/Other` и, желательно, после этого сбрасывать кэш ядра с помощью запуска программы KextUtility.
+Just do not forget to read the instructions and/or README files with these cupcakes to know the nuances of their installation and configuration. Fakesmc and VirtualSMC are not compatible and only 1 of them should be used. When using kext VirtualSMC also need to uninstall the driver SMCHelper.move the VirtualSMC driver to efi and replace it.efi. Acpibatterymanager and VoodooBatterySMC and SMCBatteryManager are probably not compatible with each other either. All the kexts should be placed in the `/EFI/CLOVER/kexts/Other` folder and preferably after that the kernel cache should be reset by running KextUtility.
 
-Если просто использовании какого-либо из этих кекстов не помогло, то нужно пропатчить файл DSDT для работы индикатора заряд батареи. Можно сделать свой патч по инструкции на форуме [tonymacx86](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) или ее сокращенной версии на форуме [olarila](https://olarila.com/forum/viewtopic.php?f=28&t=8208). Я пробовал сделать свой патч и вот, что у меня получилось:
+If simply using any of these kexts did not help, then you need to patch the DSDT file for the battery indicator to work. Can be done its the patch on instructions on forum [tonymacx86](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) or its shortened version on the forum [olarila](https://olarila.com/forum/viewtopic.php?f=28&t=8208). I tried to make my patch and here's what I got:
 
 ```c
 #Maintained by: RehabMan for: Laptop Patches
@@ -62,20 +62,20 @@ end;
 # additional patches for dv6-1380ek provided by chihab222, credit gsly
 
 # works for:
-#  HP Pavilion 15-au028ur, per Drovosek
+# HP Pavilion 15-au028ur, per Drovosek
 
 into method label B1B2 remove_entry;
 into definitionblock code_regex . insert
 begin
-Method (B1B2, 2, NotSerialized) { Return (Or (Arg0, ShiftLeft (Arg1, 8))) }\n
+Method (B1B2, 2, NotSerialized) { Return (Or (Arg0, ShiftLeft (Arg1, 8)))} \n
 end;
 
 # 16-bit EC0 registers
-#                BADC,   16,
-#                BFCC,   16,
-#                MCUR,   16,
-#                MBRM,   16,
-#                MBCV,   16,
+# BADC, 16,
+# BFCC, 16,
+# MCUR, 16,
+# MBRM, 16,
+# MBCV, 16,
 into device label EC0 code_regex BADC,\s+16, replace_matched begin ADC0,8,ADC1,8, end;
 into device label EC0 code_regex BFCC,\s+16, replace_matched begin FCC0,8,FCC1,8, end;
 into device label EC0 code_regex MCUR,\s+16, replace_matched begin CUR0,8,CUR1,8, end;
@@ -90,8 +90,8 @@ into method label UPBS code_regex (\^.*)MCUR replaceall_matched begin B1B2\(%1CU
 into method label UPBS code_regex (\^.*)MBCV replaceall_matched begin B1B2\(%1BCV0,%1BCV1\) end;
 ```
 
-Но также для меня хорошо сработал патч батареи для HP 3165sf. Перед тем как применять патчи сохраните рабочую копию файла DSDT.dsl в каком-нибудь месте. Вы можете его найти и применить патчи для батареи открыв файл DSDT.dsl в MaciASL, нажав кнопку "Патч" и в левой боковой панели пролистав до строчек, которые начинаются с "[bat]". Дальше пробуй применить патчи для примерно ваших ноутбуков. Читайте Начало каждого патча, потому что там вверху в комментариях содержится полезная справочная информация.
+But also for me the battery patch for HP 3165sf worked well. Before applying patches, save a working copy of the DSDT file.dsl in some place. You can find it and apply patches to the battery by opening the DSDT file.dsl in MaciASL by pressing the "Patch" button and in the left sidebar scrolling down to the lines that start with "[bat]". Then try to apply patches for about your laptops. Read the Beginning of each patch, because there at the top of the comments contains useful background information.
 
-У меня индикатор заряда батареи отображается и проценты изменяются при зарядке и разрядке, но часто бывает, что они не меняются и приходится сбрасывать CMOS с помощью зажатия кнопки питания на 15-20 секунд.
+I have a battery indicator displayed and the percentages change when charging and discharging, but it often happens that they do not change and have to reset the CMOS by pressing the power button for 15-20 seconds.
 
-После применения всех патчей в файле DSDT.dsl вам нужно в MaciASL открыть вкладку "Файл", выбрать "Сохранить как", назвать файл просто DSDT и формат файла выбрать "ACPI Machine Language Binary". Потом сохраненный файл DSDT.aml нужно переместить в `/EFI/CLOVER/ACPI/patched` и перезагрузить ваш хакинтош.
+After applying all patches in the DSDT file.dsl you need to open the "File" tab in MaciASL, choose "Save as", name the file simply DSDT and file format choose "ACPI Machine Language Binary". Then the saved DSDT file.aml needs to move to `/EFI/CLOVER/ACPI/patched` and reboot your Hackintosh.
