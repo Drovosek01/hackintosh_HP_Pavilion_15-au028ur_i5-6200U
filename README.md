@@ -260,3 +260,11 @@ MacOSX может быть установлена на диск (без форм
 ### Обои
 
 Вы можете найти замечательные обои на рабочий стол на сайте https://unsplash.com/
+
+### Темы на форумах
+
+В этих темах я опубликовал информацию о настройке и установке hackintosh для этого ноутбука
+
+* https://applelife.ru/threads/hp-pavilion-15-au028ur-skylake-i5-6200u.2944282/
+* https://www.tonymacx86.com/threads/guide-hp-pavilion-15-au028ur-skylake-i5-6200u.281106/
+* https://www.insanelymac.com/forum/topic/339650-guide-hp-pavilion-15-au028ur-skylake-i5-6200u-10145/
