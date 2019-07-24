@@ -108,23 +108,16 @@ These parameters are very important.
 4. In BDU
 
    * Open Options -> Configuration
-
    * Click "Check Now" and wait until the row is updated next
-
    * Everything else is left to default
-
    * Click "OK"
-
    * Select the USB flash drive and press the "Format" button and confirm the action
 
-     > When a flash drive is formatted, 2 partitions will be created on it: ESP and an empty partition. On ESP there will already be a Clover loader unpacked from an ISO image from the repository on Sourceforge
+> When a flash drive is formatted, 2 partitions will be created on it: ESP and an empty partition. On ESP there will already be a Clover loader unpacked from an ISO image from the repository on Sourceforge
 
    * Select the second section (you may need to click on the "+" to the left of the flash drive), it is usually located at the very bottom
-
    * Press the "Restore" button and select the 5.hfs files
-
    * We are waiting for the progress bar of the image recording in BDU to end
-
    * Done
 
 There is also a guide with pictures in a pdf file. This mini manual is called "BDU_FAQ_STARCOM" and [is attached to this](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post- 557498) post.
