@@ -143,7 +143,7 @@ After creating a flash drive with a Clover bootloader and the MacOSX system itse
 
 ### Used cakes
 
-[Instructions for using kexts](/docs/RUS/Configuring/InstalledKexts.md)
+[Instructions for using kexts](/docs/ENG/Configuring/InstalledKexts.md)
 
 ## Installing hackintosh macOS Mojave 10.14.5
 
@@ -180,7 +180,7 @@ Below are the most important, in my opinion, points that need to be included on 
    - Mount the EFI partition of your disk and flash drive if they are not mounted
    - All files and folders from EFI flash drives are copied to the EFI disk with replacement and reboot
 
-The full list of settings that I use is described in the corresponding file [** MacOSX ** Setup] (/docs/ENG/Configuring/ConfiguringMacOSX.md)
+The full list of settings that I use is described in the corresponding file [**MacOSX Setup**](/docs/ENG/Configuring/ConfiguringMacOSX.md)
 
 ## Configure Hackintosh
 
@@ -208,11 +208,11 @@ You can read more about this setup of sleep or hibernation on these links:
 </dict>
 ```
 
-Also [vit9696 recommends] (https://www.insanelymac.com/forum/topic/304530-clover-change-explanations/?do=findComment&comment=2617018) always enable the `RtcHibernateAware` flag, but everything works fine for me with item off. There are also different parameters in the config that allow you to adjust the hibernation/sleep, you can find out about them in the free book-textbook Clover khaki.
+Also [vit9696 recommends](https://www.insanelymac.com/forum/topic/304530-clover-change-explanations/?do=findComment&comment=2617018) always enable the `RtcHibernateAware` flag, but everything works fine for me with item off. There are also different parameters in the config that allow you to adjust the hibernation/sleep, you can find out about them in the free book-textbook Clover khaki.
 
 ### Installing Windows
 
-[Description of the nuances of installing Windows next to Hackintosh](/docs/RUS/AboutWindows/InstallWindows.md)
+[Description of the nuances of installing Windows next to Hackintosh](/docs/ENG/AboutWindows/InstallWindows.md)
 
 ### Windows Setup
 
@@ -243,13 +243,13 @@ If you have a hackintosh, and not a real Apple computer, then I recommend that t
 
 These programs are used mainly for configuring Hackintosh, as a working macOS tool, they are hardly useful to you. It is advisable to leave some of these programs in your hackintosh in case something goes wrong and the system starts to show off, because not everyone can determine how correctly and how fully your hackintosh is configured.
 
-[Hackintosh tools](/docs/RUS/ProgramsList/HackintoshTools.md)
+[Hackintosh tools](/docs/ENG/ProgramsList/HackintoshTools.md)
 
 ### Framework software for other programs
 
 These programs are needed for other programs or scripts. This is mainly used by different developers. If you need them, even without this list you will know which program you need.
 
-[Other Software](/docs/RUS/ProgramsList/OtherSoftware.md)
+[Other Software](/docs/ENG/ProgramsList/OtherSoftware.md)
 
 ### Installable Software
 
