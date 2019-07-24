@@ -1,5 +1,7 @@
 # Что я делал при установки Hackintosh на ноутбук
 
+[ENGLISH](/docs/ENG/README.md) | РУССКИЙ
+
 Эту инструкцию я писал для себя, чтобы после переустановки не вспоминать что и как делать. Инструкция написана после установки macOS Mojave 10.14.5. на ноутбук [HP Pavilion 15-au028ur](https://www.support.hp.com/document/c05193511).
 
 ## Характеристики ноутбука HP Pavilion 15-au028ur
@@ -133,15 +135,15 @@ MacOSX может быть установлена на диск (без форм
 
 ### Используемые драйвера
 
-[Список драйверов](/docs/Configuring/InstalledDrivers.md)
+[Список драйверов](/docs/RUS/Configuring/InstalledDrivers.md)
 
 ### Настройка файла config.plist
 
-[Инструкция по настройке конфига](/docs/Configuring/CustomizingConfig.md)
+[Инструкция по настройке конфига](/docs/RUS/Configuring/CustomizingConfig.md)
 
 ### Используемые кексты
 
-[Инструкция по использованию кекстов](/docs/Configuring/InstalledKexts.md)
+[Инструкция по использованию кекстов](/docs/RUS/Configuring/InstalledKexts.md)
 
 ## Установка hackintosh macOS Mojave 10.14.5
 
@@ -178,7 +180,7 @@ MacOSX может быть установлена на диск (без форм
    - Примонтируете раздел EFI вашего диска и флешки, если они не примонтированы
    - Все файлы и папки с EFI флешки копируете на EFI диска с заменой и перезагружаетесь
 
-Полный список настроек, который я применяю, описан в соответствующем файле [**Настройка MacOSX**](/docs/Configuring/ConfiguringMacOSX.md)
+Полный список настроек, который я применяю, описан в соответствующем файле [**Настройка MacOSX**](/docs/RUS/Configuring/ConfiguringMacOSX.md)
 
 ## Настройка Hackintosh
 
@@ -210,7 +212,7 @@ MacOSX может быть установлена на диск (без форм
 
 ### Установка Windows
 
-[Описание нюансов установки Windows рядом с Hackintosh](/docs/AboutWindows/InstallWindows.md)
+[Описание нюансов установки Windows рядом с Hackintosh](/docs/RUS/AboutWindows/InstallWindows.md)
 
 ### Настройка Windows
 
@@ -225,7 +227,7 @@ MacOSX может быть установлена на диск (без форм
 
 С помощью применения патчей для файла DSDT, мне удалось заставить отображаться индикатор заряда батареи и включить регулировку яркости экрана с помощью клавиш Fn+F2 и Fn+F3.
 
-[Настройка DSDT](/docs/Configuring/PatchingDSDT.md)
+[Настройка DSDT](/docs/RUS/Configuring/PatchingDSDT.md)
 
 ## Установка программ
 
@@ -241,19 +243,19 @@ MacOSX может быть установлена на диск (без форм
 
 Эти программы программы используются в основном для настройки Hackintosh, как рабочий инструмент macOS они вам вряд ли пригодятся. Часть этих программ желательно оставить в вашем hackintosh на тот случай, если что-то пойдет не так и система начнет "выпендриваться", ведь не все могут определить насколько правильно и насколько полноценно настроен ваш hackintosh.
 
-[Hackintosh tools](/docs/ProgramsList/HackintoshTools.md)
+[Hackintosh tools](/docs/RUS/ProgramsList/HackintoshTools.md)
 
 ### Программы-фреймворки для работы других программ
 
 Эти программы нужны для работы других программ или скриптов. В основном это используется разными разработчиками. Если они вам понадобятся, то вы и без этого списка будете знать, какая программа вам нужны.
 
-[Other Software](/docs/ProgramsList/OtherSoftware.md)
+[Other Software](/docs/RUS/ProgramsList/OtherSoftware.md)
 
 ### Устанавливаемое ПО
 
 Большинство прогамм из этого списка я использую в повседневной работе. Естественно, список не самый полный, смотрите и решайте по своим потребностям.
 
-[Regular Software](/docs/ProgramsList/RegularSoftware.md)
+[Regular Software](/docs/RUS/ProgramsList/RegularSoftware.md)
 
 ## Остальное
 
