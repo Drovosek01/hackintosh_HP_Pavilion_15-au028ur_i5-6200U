@@ -250,6 +250,12 @@ MacOSX может быть установлена на диск (без форм
 
 [Regular Software](/docs/RUS/ProgramsList/RegularSoftware.md)
 
+## Тестирование в бенчмарках
+
+Список тестов, их описание и результаты представлены в отдельном файле.
+
+[Результаты тестирования в бенчмарках](/docs/RUS/BenchmarksTesting/benchmark_testing.md)
+
 ## Остальное
 
 ### Обои
