@@ -41,7 +41,9 @@
    - Customize "Mouse"
    - In "Users and groups" open "login Options" and set automatic login for user
    - In the "General access" to change or write the name of the computer
-   - In "Keyboard" press "modification Keys"and swap Command and Ctrl
+   - In "Keyboard"
+     - Press "modification Keys" and swap Command and Ctrl
+     - Open the "Text" tab and uncheck "Correct errors automatically", "Automatically write words with a capital letter" and "Add a dot with a double space"
    - In "Universal access"
      - In the "Zoom" to enable and configure the increase in convenience (before that, decide whether to swap Ctrl and Command)
      - In "Mouse and trackpad" in "trackpad Options"
