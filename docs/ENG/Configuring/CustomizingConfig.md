@@ -51,7 +51,7 @@ Here's what I changed in my config file.plist:
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-wegnoegpu darkwake=0</string>
+		<string>uia_exclude=HS07 -wegnoegpu darkwake=0</string>
 		<key>RtcHibernateAware</key>
 		<true/>
 		<key>Timeout</key>
@@ -110,3 +110,15 @@ This is not a working config.plist. I brought only those items that have been mo
 Such SMBIOS will be suitable for loading, but then it is better to generate its points completely, for example with the help of Clover Configurator.
 
 Also, you should read the book "[Clover of Hacky Color](https://sourceforge.net/projects/cloverefiboot/files/Documents/)" to understand which items in config.plist responsible for what.
+
+#### Explanations
+
+---
+
+The boot argument `uia_exclude=HS07` is used with the [USBInjectAll](/docs/ENG/Configuring/InstalledKexts.md) kext. I used this "bundle" to disable Bluetooth in the Hackintosh.
+
+What to write to you instead of `HS07` you can learn using [IORegistryExplorer](/docs/ENG/ProgramsList/HackintoshTools.md), by searching for the word "bluetooth".
+
+I needed to disable Bluetooth when additional upgrade mac OS Mojave 10.14.6, because the update [wanted to install](https://vk.com/wall-12954845_488300) due to some problems with Bluetooth. Just disabled the module will not waste battery power, which will give a small increase in autonomy.
+
+---

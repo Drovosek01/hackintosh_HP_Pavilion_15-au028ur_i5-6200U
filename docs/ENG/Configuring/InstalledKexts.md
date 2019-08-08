@@ -13,3 +13,4 @@ Naturally for each configuration of the computer you need a set of kexts and not
 * ACPIMonitor https://sourceforge.net/projects/hwsensors3.hwsensors.p/
 * VoodooBatterySMC https://sourceforge.net/projects/hwsensors3.hwsensors.p/
 * ACPIKeyboard https://bitbucket.org/RehabMan/os-x-acpi-keyboard/downloads/
+* USBInjectAll https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/

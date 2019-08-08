@@ -51,7 +51,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-wegnoegpu darkwake=0</string>
+		<string>uia_exclude=HS07 -wegnoegpu darkwake=0</string>
 		<key>RtcHibernateAware</key>
 		<true/>
 		<key>Timeout</key>
@@ -110,3 +110,15 @@
 Такой SMBIOS подойдет для загрузки, но потом лучше сгенерировать его пункты полностью, например с помощью Clover Configurator.
 
 Так же вам не помешает прочитать книгу "[Clover цвета хаки](https://sourceforge.net/projects/cloverefiboot/files/Documents/)", чтобы понимать какие пункты в config.plist за что отвечают.
+
+#### Пояснения
+
+---
+
+Аргумент загрузки `uia_exclude=HS07` используется вместе с кекстом [USBInjectAll](/docs/RUS/Configuring/InstalledKexts.md). Я использовал эту "связку", чтобы отключить Bluetooth в хакинтоше.
+
+Что писать вам вместо `HS07` вы можете узнать с помощью [IORegistryExplorer](/docs/RUS/ProgramsList/HackintoshTools.md), задав  поиск по слову "bluetooth".
+
+Мне понадобилось отключить Bluetooth при дополнительном обновлении macOS Mojave 10.14.6, потому что обновление [не хотело устанавливаться](https://vk.com/wall-12954845_488300) из-за каких-то проблем с Bluetooth. Так же отключенный модуль не будет тратить энергию аккумулятора, что даст небольшой прирост к автономности.
+
+---
