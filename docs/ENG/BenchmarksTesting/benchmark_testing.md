@@ -87,7 +87,7 @@ Also from this developer/company there are benchmarks [GFXBench OpenGL](https://
 
 ### AJA System Test Lite
 
-Tested the speed of reading and writing in Chinese Goldenfir SSD 360 GB. After 1 or 2 GB of continuous reading and/or writing, the speed drops to 8 MB/s for about 1 minute and then normalizes.
+Tested the speed of reading and writing in Chinese Goldenfir SSD 360 GB. After 1 or 2 GB of continuous reading and/or writing, the speed drops to 8 MB/s for about 1 minute and then normalizes. I assume this is due to poor controller performance or a small or poor quality SSD disk cache.
 
 ![AJA System Test Lite SSD testing](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/AJA%20System%20Test%20Lite%20(Goldenfir%20360%20GB)%201.png?raw=true)
 
