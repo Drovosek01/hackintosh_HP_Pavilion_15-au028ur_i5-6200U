@@ -8,6 +8,7 @@
 * [Unigine Heaven Benchmark 4.0](https://benchmark.unigine.com/heaven)
 * [Cinebench Release 20](https://www.maxon.net/ru/produkty/cinebench-r20-overview/)
 * [AJA System Test Lite](https://www.aja.com/products/aja-system-test)
+* [GFXBench Metal 5.0](https://gfxbench.com/benchmark.jsp)
 
 Во время тестирования ноутбук был подключен к розетке. Все программы кроме самой программы -бенчмарка (и кроме Finder) были закрыты и завершены. Во время тестирования ноутбук стоял на столе и ничего не преграждало поток теплого воздуха из кулера.
 
@@ -71,9 +72,17 @@ Unigine Heaven 4.0 - result (1600x900 without volumetric shadows)
 
 ![Cinebench R20 testing](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Cinebench%20R20.png?raw=true)
 
+### GFXBench Metal 5.0
+
+Случайно наткнулся на этот бенчмарк. Сцены, которые прогонялись для тестирования мне понравились в плане производительности, потому что они почти не лагали на моей встроенной графике и при этом там были разные спец. эффекты, которые радовали глаз и придавали эффект реалистичности, хоть иногда выглядели немного "пластмассовыми".
+
+На официальном сайте на кнопке скачивания версии для OSX написано, что версия программы 3.1, но в интерфейсе бенчмарка написано, что версия 5.0.
+
+Так же от данного разработчика/компании есть бенчмарки [GFXBench OpenGL](https://gfxbench.com/benchmark.jsp) и [CompuBench OpenCL](https://compubench.com/benchmark.jsp), но при запуске этих программ, у меня появлялось предупреждение о том, что программа запущена на виртуальной машине и поэтому она не будет работать, поэтому в этих программах мне не удалось провести тесты.
+
 ### AJA System Test Lite
 
-Тестировал скорость чтения и записи на китайский SSD Goldenfir 360 GB. После 1 или 2 ГБ непрерывного чтений и/или записи скорость падает до 8 МБ/с примерно на 1 минуту, а потом нормализуется.
+Тестировал скорость чтения и записи на китайский SSD Goldenfir 360 GB. После 1 или 2 ГБ непрерывного чтения и/или записи скорость падает до 8 МБ/с примерно на 1 минуту, а потом нормализуется. Предполагаю, что это связано с плохой работой контроллера или маленьким или некачественным кэшем SSD диска.
 
 ![AJA System Test Lite SSD testing](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/AJA%20System%20Test%20Lite%20(Goldenfir%20360%20GB)%201.png?raw=true)
 
