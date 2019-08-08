@@ -15,6 +15,13 @@
 	<dict>
 		<key>DSDT</key>
 		<dict>
+      <key>Fixes</key>
+      <dict>
+        <key>AddHDMI</key>
+				<false/>
+        <key>FixDisplay</key>
+				<false/>
+      </dict>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -45,13 +52,44 @@
 					QVpBTA==
 					</data>
 				</dict>
+        <dict>
+					<key>Comment</key>
+					<string>NVOP</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					W4EOUENBUAMAQAhMQ1RMEBQfX0lOSQBwAFwv
+					BV9TQl9QQ0kwUlAwNVBYU1hfQURSFEAN
+					</data>
+					<key>Replace</key>
+					<data>
+					W4EOUENBUAMAQAhMQ1RMEBQjX0lOSQBwAFwv
+					BV9TQl9QQ0kwUlAwNVBYU1hfQURSX09GRhRA
+					DQ==
+					</data>
+				</dict>
 			</array>
 		</dict>
+    <key>SSDT</key>
+    <dict>
+      <key>Generate</key>
+      <dict>
+        <key>CStates</key>
+				<false/>
+        <key>PStates</key>
+				<false/>
+        <key>PluginType</key>
+				<true/>
+      </dict>
+    </dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>uia_exclude=HS07 -wegnoegpu darkwake=0</string>
+		<string>uia_exclude=HS07 darkwake=0</string>
+    <key>HibernationFixup</key>
+		<false/>
 		<key>RtcHibernateAware</key>
 		<true/>
 		<key>Timeout</key>
@@ -59,6 +97,38 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+    <key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAAWGQ==
+				</data>
+				<key>device-id</key>
+				<data>
+				FhkAAA==
+				</data>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>model</key>
+				<string>Intel HD Graphics 520</string>
+			</dict>
+		</dict>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
@@ -91,6 +161,18 @@
 		<key>Theme</key>
 		<string>Mojave</string>
 	</dict>
+  <key>Graphics</key>
+  <dict>
+  	<key>Inject</key>
+		<dict>
+			<key>ATI</key>
+			<false/>
+			<key>Intel</key>
+			<false/>
+			<key>NVidia</key>
+			<false/>
+		</dict>
+  </dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>KernelPm</key>
@@ -101,11 +183,16 @@
 		<key>ProductName</key>
 		<string>MacBookPro13,1</string>
 	</dict>
+  <key>SystemParameters</key>
+  <dict>
+  	<key>InjectKexts</key>
+		<true/>
+  </dict>
 </dict>
 </plist>
 ```
 
-Это не рабочий config.plist. Выше я привел только те пункты, которые были изменены по сравнению с родным конфигом из ISO образа Clover ревизии 4972.
+Это не рабочий config.plist. Выше я привел только те пункты, которые были изменены по сравнению с родным конфигом из ISO образа Clover ревизии 5033.
 
 Такой SMBIOS подойдет для загрузки, но потом лучше сгенерировать его пункты полностью, например с помощью Clover Configurator.
 

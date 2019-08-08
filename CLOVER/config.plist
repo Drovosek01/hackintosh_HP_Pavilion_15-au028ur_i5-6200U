@@ -67,7 +67,7 @@
 				<key>AddDTGP</key>
 				<true/>
 				<key>AddHDMI</key>
-				<true/>
+				<false/>
 				<key>AddIMEI</key>
 				<false/>
 				<key>AddMCHC</key>
@@ -89,7 +89,7 @@
 				<key>FixDarwin7</key>
 				<true/>
 				<key>FixDisplay</key>
-				<true/>
+				<false/>
 				<key>FixFirewire</key>
 				<false/>
 				<key>FixHDA</key>
@@ -228,20 +228,6 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>CpuPm</string>
-			</dict>
-			<dict>
-				<key>#Length</key>
-				<integer>720</integer>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Ist</string>
-			</dict>
 		</array>
 		<key>FixHeaders</key>
 		<true/>
@@ -292,11 +278,11 @@
 				<false/>
 				<key>#APSN</key>
 				<false/>
-				<key>#PluginType</key>
-				<false/>
 				<key>CStates</key>
-				<true/>
+				<false/>
 				<key>PStates</key>
+				<false/>
+				<key>PluginType</key>
 				<true/>
 			</dict>
 		</dict>
@@ -312,7 +298,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>uia_exclude=HS07 -wegnoegpu darkwake=0</string>
+		<string>uia_exclude=HS07 darkwake=0</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -448,178 +434,6 @@
 		<false/>
 		<key>#IntelMaxValue</key>
 		<string>0x710</string>
-		<key>#Properties</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>#Comment</key>
-				<string>This is USB3.0</string>
-				<key>AAPL,clock-id</key>
-				<data>
-				AA==
-				</data>
-				<key>AAPL,current-available</key>
-				<data>
-				sAQ=
-				</data>
-				<key>AAPL,current-extra</key>
-				<data>
-				vAI=
-				</data>
-				<key>AAPL,current-in-sleep</key>
-				<data>
-				6AM=
-				</data>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
-				<key>device_type</key>
-				<string>XHCI</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x19,0x0)</key>
-			<dict>
-				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
-			<dict>
-				<key>AAPL,clock-id</key>
-				<data>
-				AQ==
-				</data>
-				<key>AAPL,current-available</key>
-				<data>
-				sAQ=
-				</data>
-				<key>AAPL,current-extra</key>
-				<data>
-				vAI=
-				</data>
-				<key>AAPL,current-in-sleep</key>
-				<data>
-				6AM=
-				</data>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
-				<key>device_type</key>
-				<string>EHCI</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
-			<dict>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x1)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>device_type</key>
-				<string>Airport</string>
-				<key>model</key>
-				<string>Apple WiFi card</string>
-				<key>name</key>
-				<string>AirPort Extreme</string>
-				<key>subsystem-vendor-id</key>
-				<data>
-				axAAAA==
-				</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x5)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>compatible</key>
-				<string>pci14e4,16bc</string>
-				<key>device_type</key>
-				<string>Media controller</string>
-				<key>model</key>
-				<string>O2 Micro SD card reader</string>
-				<key>name</key>
-				<string>AirPort Extreme</string>
-				<key>subsystem-vendor-id</key>
-				<data>
-				axAAAA==
-				</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
-			<dict>
-				<key>AAPL,clock-id</key>
-				<data>
-				Ag==
-				</data>
-				<key>AAPL,current-available</key>
-				<data>
-				sAQ=
-				</data>
-				<key>AAPL,current-extra</key>
-				<data>
-				vAI=
-				</data>
-				<key>AAPL,current-in-sleep</key>
-				<data>
-				6AM=
-				</data>
-				<key>built-in</key>
-				<data>
-				AA==
-				</data>
-				<key>device_type</key>
-				<string>EHCI</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>#AAPL00,override-no-connect</key>
-				<data>
-				AP///////wANr2kUAAAAABYWAQSgHxF4AtFFm1lXjisj
-				UFQAAAABAQEBAQEBAQEBAQEBAQEBEhtWclAADDAQZCYA
-				Na4QAAAaDBJWclAADDAQIiYANa4QAAAaAAAA/gA3SlJU
-				OYAxNDBCR0UKAAAAAAAAQTGUAAAAAAEBCiAgAMU=
-				</data>
-				<key>@0,backlight-control</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>AAPL,HasLid</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>AAPL,HasPanel</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>AAPL,backlight-control</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwBmAQ==
-				</data>
-				<key>class-code</key>
-				<data>
-				AAADAA==
-				</data>
-				<key>device-id</key>
-				<data>
-				ZgEAAA==
-				</data>
-				<key>graphic-options</key>
-				<data>
-				DAAAAA==
-				</data>
-				<key>model</key>
-				<string>Intel HD Graphics 4000</string>
-				<key>subsystem-vendor-id</key>
-				<data>
-				axAAAA==
-				</data>
-				<key>vendor-id</key>
-				<data>
-				hoAAAA==
-				</data>
-			</dict>
-		</dict>
 		<key>#SetIntelBacklight</key>
 		<true/>
 		<key>#SetIntelMaxBacklight</key>
@@ -637,6 +451,38 @@
 		<false/>
 		<key>LANInjection</key>
 		<false/>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAAWGQ==
+				</data>
+				<key>device-id</key>
+				<data>
+				FhkAAA==
+				</data>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>model</key>
+				<string>Intel HD Graphics 520</string>
+			</dict>
+		</dict>
 		<key>SetIntelBacklight</key>
 		<true/>
 		<key>SetIntelMaxBacklight</key>
@@ -817,15 +663,6 @@
 		<integer>0</integer>
 		<key>#FBName</key>
 		<string>Makakakakala</string>
-		<key>#Inject</key>
-		<dict>
-			<key>ATI</key>
-			<true/>
-			<key>Intel</key>
-			<false/>
-			<key>NVidia</key>
-			<false/>
-		</dict>
 		<key>#LoadVBios</key>
 		<false/>
 		<key>#NVCAP</key>
@@ -880,6 +717,15 @@
 			<string>0x1006</string>
 			<key>#VideoInputSignal</key>
 			<string>0xA1</string>
+		</dict>
+		<key>Inject</key>
+		<dict>
+			<key>ATI</key>
+			<false/>
+			<key>Intel</key>
+			<false/>
+			<key>NVidia</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -1076,117 +922,6 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>#BiosReleaseDate</key>
-		<string>05/03/10</string>
-		<key>#BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>#BiosVersion</key>
-		<string>MB11.88Z.0061.B03.0809221748</string>
-		<key>#Board-ID</key>
-		<string>Mac-F4208CC8</string>
-		<key>#BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>#BoardSerialNumber</key>
-		<string>C02032101R5DC771H</string>
-		<key>#BoardType</key>
-		<integer>10</integer>
-		<key>#BoardVersion</key>
-		<string>Proto1</string>
-		<key>#ChassisAssetTag</key>
-		<string>LatitudeD420</string>
-		<key>#ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>#ChassisType</key>
-		<integer>16</integer>
-		<key>#EfiVersion</key>
-		<string>220.200.252.0.0</string>
-		<key>#Family</key>
-		<string>MacBook</string>
-		<key>#FirmwareFeatures</key>
-		<string>0xC0001403</string>
-		<key>#FirmwareFeaturesMask</key>
-		<string>0xFFFFFFFF</string>
-		<key>#LocationInChassis</key>
-		<string>MLB</string>
-		<key>#Memory</key>
-		<dict>
-			<key>Channels</key>
-			<integer>2</integer>
-			<key>Modules</key>
-			<array>
-				<dict>
-					<key>Frequency</key>
-					<integer>1333</integer>
-					<key>Part</key>
-					<string>C0001403</string>
-					<key>Serial</key>
-					<string>00001001</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Slot</key>
-					<integer>0</integer>
-					<key>Type</key>
-					<string>DDR3</string>
-					<key>Vendor</key>
-					<string>Kingston</string>
-				</dict>
-				<dict>
-					<key>Frequency</key>
-					<integer>1333</integer>
-					<key>Part</key>
-					<string>C0001404</string>
-					<key>Serial</key>
-					<string>00001002</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Slot</key>
-					<integer>2</integer>
-					<key>Type</key>
-					<string>DDR3</string>
-					<key>Vendor</key>
-					<string>Kingston</string>
-				</dict>
-			</array>
-			<key>SlotCount</key>
-			<integer>4</integer>
-		</dict>
-		<key>#Mobile</key>
-		<true/>
-		<key>#PlatformFeature</key>
-		<string>0x03</string>
-		<key>#ProductName</key>
-		<string>MacBook1,1</string>
-		<key>#SerialNumber</key>
-		<string>4H629LYAU9C</string>
-		<key>#Slots</key>
-		<array>
-			<dict>
-				<key>Device</key>
-				<string>ATI</string>
-				<key>ID</key>
-				<integer>1</integer>
-				<key>Name</key>
-				<string>PCIe Slot 0</string>
-				<key>Type</key>
-				<integer>16</integer>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>WIFI</string>
-				<key>ID</key>
-				<integer>0</integer>
-				<key>Name</key>
-				<string>Airport</string>
-				<key>Type</key>
-				<integer>1</integer>
-			</dict>
-		</array>
-		<key>#SmUUID</key>
-		<string>00000000-0000-1000-8000-010203040506</string>
-		<key>#Trust</key>
-		<true/>
-		<key>#Version</key>
-		<string>1.0</string>
 		<key>BiosReleaseDate</key>
 		<string>05/25/2019</string>
 		<key>BiosVendor</key>
@@ -1245,7 +980,7 @@
 		<key>#NvidiaWeb</key>
 		<false/>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<true/>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
