@@ -7,8 +7,8 @@
 * [Tyler's Frame Machine](https://tylemagne.github.io/TFM/)
 * [Unigine Heaven Benchmark 4.0](https://benchmark.unigine.com/heaven)
 * [Cinebench Release 20](https://www.maxon.net/ru/produkty/cinebench-r20-overview/)
-* [AJA System Test Lite](https://www.aja.com/products/aja-system-test)
 * [GFXBench Metal 5.0](https://gfxbench.com/benchmark.jsp)
+* [AJA System Test Lite](https://www.aja.com/products/aja-system-test)
 
 Во время тестирования ноутбук был подключен к розетке. Все программы кроме самой программы -бенчмарка (и кроме Finder) были закрыты и завершены. Во время тестирования ноутбук стоял на столе и ничего не преграждало поток теплого воздуха из кулера.
 
@@ -78,7 +78,12 @@ Unigine Heaven 4.0 - result (1600x900 without volumetric shadows)
 
 На официальном сайте на кнопке скачивания версии для OSX написано, что версия программы 3.1, но в интерфейсе бенчмарка написано, что версия 5.0.
 
+![GFXBench Metal 5.0 screen-1](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/GFXBench_Metal_5.0_screen-1.png?raw=true)
+![GFXBench Metal 5.0 screen-2](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/GFXBench_Metal_5.0_screen-2.png?raw=true)
+
 Так же от данного разработчика/компании есть бенчмарки [GFXBench OpenGL](https://gfxbench.com/benchmark.jsp) и [CompuBench OpenCL](https://compubench.com/benchmark.jsp), но при запуске этих программ, у меня появлялось предупреждение о том, что программа запущена на виртуальной машине и поэтому она не будет работать, поэтому в этих программах мне не удалось провести тесты.
+
+![GFXBench OpenGL and CompuBench OpenCL error](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/GFXBench_OpenGL_error.png?raw=true)
 
 ### AJA System Test Lite
 
