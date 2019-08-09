@@ -4,7 +4,7 @@ Here is described how I have changed net config that goes along with Clover revi
 
 You can download the disk image with this config from the official page of the loader Clover: https://sourceforge.net/projects/cloverefiboot/files/Bootable_ISO/ For unpacking .lzma and .tar files in Windows use [7zip](https://www.7-zip.org/) or [Bandizip]([https://bandisoft.com/bandizip](https://www.bandisoft.com/bandizip))
 
-Here's what I changed in my file [config.plist](/CLOVER/config.plist):
+Here's what I changed in my file [config.plist](/EFI/CLOVER/config.plist):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
