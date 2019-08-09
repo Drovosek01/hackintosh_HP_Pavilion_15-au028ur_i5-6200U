@@ -2,7 +2,7 @@
 
 ENGLISH | [РУССКИЙ](/README.md)
 
-I wrote this instruction for myself, so that after reinstallation I don’t remember what to do. Instructions written after installing macOS Mojave 10.14.5. on a laptop [HP Pavilion 15-au028ur](https://www.support.hp.com/document/c05193511).
+I wrote this instruction for myself, so that after reinstallation I don’t remember what to do. Instructions written after installing macOS Mojave 10.14.6. on a laptop [HP Pavilion 15-au028ur](https://www.support.hp.com/document/c05193511).
 
 ## HP Pavilion 15-au028ur Notebook Specifications
 
@@ -100,7 +100,7 @@ These parameters are very important.
 ## Creating a bootable flash drive
 
 1. [Download BootDiskUtility](http://cvad-mac.narod.ru/index/bootdiskutility_exe/0-5)
-2. Download [special image](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post-557498) macOS Mojave 10.14. 5 for BDU (this is a file with the .hfs extension, maybe it will be in the archive)
+2. Download [special image](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post-557498) macOS Mojave 10.14.6 for BDU (this is a file with the .hfs extension, maybe it will be in the archive)
 3. Insert the flash drive size of 8 GB or more (in any port)
 4. In BDU
 
@@ -135,7 +135,7 @@ After creating a flash drive with a Clover bootloader and the MacOSX system itse
 
 [Instructions for using kexts](/docs/ENG/Configuring/InstalledKexts.md)
 
-## Installing hackintosh macOS Mojave 10.14.5
+## Installing hackintosh macOS Mojave 10.14.6
 
 Standard MacOSX installation:
 

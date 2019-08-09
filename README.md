@@ -2,7 +2,7 @@
 
 [ENGLISH](/docs/ENG/README.md) | РУССКИЙ
 
-Эту инструкцию я писал для себя, чтобы после переустановки не вспоминать что и как делать. Инструкция написана после установки macOS Mojave 10.14.5. на ноутбук [HP Pavilion 15-au028ur](https://www.support.hp.com/document/c05193511).
+Эту инструкцию я писал для себя, чтобы после переустановки не вспоминать что и как делать. Инструкция написана после установки macOS Mojave 10.14.6. на ноутбук [HP Pavilion 15-au028ur](https://www.support.hp.com/document/c05193511).
 
 ## Характеристики ноутбука HP Pavilion 15-au028ur
 
@@ -101,7 +101,7 @@ MacOSX может быть установлена на диск (без форм
 
 1. [Скачиваем BootDiskUtility](http://cvad-mac.narod.ru/index/bootdiskutility_exe/0-5)
 
-2. Скачиваем [специальный образ](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post-557498) macOS Mojave 10.14.5 для BDU (это файл с расширением .hfs, возможно он будет находится в архиве)
+2. Скачиваем [специальный образ](https://applelife.ru/threads/bdu-macos-i-clover-iz-windows-izgotovlenie-zagruzochnoj-flehshki.37189/page-57#post-557498) macOS Mojave 10.14.6 для BDU (это файл с расширением .hfs, возможно он будет находится в архиве)
 
 3. Вставляем флешку размером 8 ГБ или больше (в любой порт)
 
@@ -138,7 +138,7 @@ MacOSX может быть установлена на диск (без форм
 
 [Инструкция по использованию кекстов](/docs/RUS/Configuring/InstalledKexts.md)
 
-## Установка hackintosh macOS Mojave 10.14.5
+## Установка hackintosh macOS Mojave 10.14.6
 
 Стандартная установка MacOSX:
 
