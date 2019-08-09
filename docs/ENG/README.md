@@ -253,7 +253,7 @@ The list of tests, their description and results are presented in a separate fil
 
 [Benchmark test results](/docs/ENG/BenchmarksTesting/benchmark_testing.md)
 
-## Else
+## More
 
 ### Wallpapers
 

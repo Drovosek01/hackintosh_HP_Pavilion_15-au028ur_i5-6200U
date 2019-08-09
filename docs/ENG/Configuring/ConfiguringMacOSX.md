@@ -53,4 +53,4 @@
    - If Clover on your flash drive is configured, the remaining checkboxes can not be changed, and if Clover on the flash drive is not configured, then you can configure it in this menu
    - Mount the EFI partition of your disk and flash drive if they are not mounted
    - All files and folders with EFI stick copy to the EFI disk with the replacement and reboot
-7. Flip the `MyKeyboardBundle ' file.bundle` in `/Library/Keyboard Layouts` and ' /System/Library/Keyboard Layouts` or make this file using the program Ukelele and [Hyde](https://www.youtube.com/watch?v=Ll6UGWGSSv8). Then go to "System settings", "Keyboard", "input Sources" and add a new layout and remove the Russian layout.
+7. Flip the file (folder) [MyKeyboardBundle.bundle](/OtherFiles/MyKeyboardBundle.bundle) in `/Library/Keyboard Layouts` and ' /System/Library/Keyboard Layouts` or make this file using the program Ukelele and [Guide](https://www.youtube.com/watch?v=Ll6UGWGSSv8). Then go to "System settings", "Keyboard", "input Sources" and add a new layout and remove the Russian layout.

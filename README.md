@@ -56,7 +56,7 @@
 
 * Wifi
 * Bluetooth
-* Nvidia Geforce 940MX (отключена в macOS с помощью аргумента загрузки `-wegnoegpu`)
+* Nvidia Geforce 940MX (отключена в macOS с помощью патча `NVOP` в конфиге)
 * FaceTime, iMassage, HandOff, Continuity - для того, чтобы заставить работать эти функции нужно, чтобы работал Wifi (и, наверное, bluetooth, но это не точно), а чтобы в моем ноутбуке работал Wifi (и Bluetooth), нужно купить совместимые с macOS Mojave Wifi модули и заменить их в ноутбуке, но я не захотел этим заниматься
 
 ### Что не проверено
