@@ -10,15 +10,31 @@
 * [GFXBench Metal 5.0](https://gfxbench.com/benchmark.jsp)
 * [AJA System Test Lite](https://www.aja.com/products/aja-system-test)
 
-Во время тестирования ноутбук был подключен к розетке. Все программы кроме самой программы -бенчмарка (и кроме Finder) были закрыты и завершены. Во время тестирования ноутбук стоял на столе и ничего не преграждало поток теплого воздуха из кулера.
+Во время тестирования ноутбук был подключен к розетке. Все программы кроме самой программы -бенчмарка (и кроме Finder) были закрыты и завершены. Во время тестирования ноутбук стоял на столе и ничего не преграждало поток теплого воздуха из кулера. Во время тестирования были использованы 2 планки ОЗУ (и используются до сих пор), поэтому память работала в двухканальном режиме.
 
 Тестирование проводилось в macOS Mojave 10.14.6 Build 18G84.
 
 ### Geekbench
 
+#### Тестирование процессора
+
 Результат можно посмотреть по ссылке: https://browser.geekbench.com/v4/cpu/14180657
 
 ![Geekbench testing result](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Geekbench%20(4.4.1).png?raw=true)
+
+#### Тестирование видеокарты
+
+**Open CL**
+
+Результат можно посмотреть по ссылке: https://browser.geekbench.com/v4/compute/4433547
+
+![Geekbench OpenCL testing results](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Geekbench%20(4.4.1)%20OpenCL.png?raw=true)
+
+**Metal**
+
+Результат можно посмотреть по ссылке: https://browser.geekbench.com/v4/compute/4433559
+
+![Geekbench Metal testing testing results](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Geekbench%20(4.4.1)%20Metal.png?raw=true)
 
 ### Novabench
 

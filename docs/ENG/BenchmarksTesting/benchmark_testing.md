@@ -10,15 +10,31 @@ I have tested in these programs:
 * [GFXBench Metal 5.0](https://gfxbench.com/benchmark.jsp)
 * [AJA System Test Lite](https://www.aja.com/products/aja-system-test)
 
-During testing, the laptop was plugged into an outlet. All programs except the benchmark program (and except Finder) were closed and completed. During testing, the laptop was standing on the table and nothing was blocking the flow of warm air from the cooler.
+During testing, the laptop was plugged into an outlet. All programs except the benchmark program (and except Finder) were closed and completed. During testing, the laptop was standing on the table and nothing was blocking the flow of warm air from the cooler. During testing, 2 RAM slots were used (and are still in use), so the memory worked in two-channel mode.
 
 The testing was carried out in macOS Mojave 10.14.6 Build 18G84.
 
 ### Geekbench
 
-The result can be viewed at the link:  https://browser.geekbench.com/v4/cpu/14180657
+#### CPU testing
+
+The result can be viewed at the link: https://browser.geekbench.com/v4/cpu/14180657
 
 ![Geekbench testing result](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Geekbench%20(4.4.1).png?raw=true)
+
+#### GPU testing
+
+**Open CL**
+
+The result can be viewed at the link: https://browser.geekbench.com/v4/compute/4433547
+
+![Geekbench OpenCL testing results](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Geekbench%20(4.4.1)%20OpenCL.png?raw=true)
+
+**Metal**
+
+The result can be viewed at the link: https://browser.geekbench.com/v4/compute/4433559
+
+![Geekbench Metal testing testing results](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/benchmarks_results_screenshots/Geekbench%20(4.4.1)%20Metal.png?raw=true)
 
 ### Novabench
 
