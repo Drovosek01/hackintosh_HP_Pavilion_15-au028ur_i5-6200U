@@ -218,7 +218,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to _XOSI</string>
+					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -227,7 +227,7 @@
 					</data>
 					<key>Replace</key>
 					<data>
-					X1hPU0k=
+					WE9TSQ==
 					</data>
 				</dict>
 			</array>
