@@ -14,3 +14,6 @@
 * VoodooBatterySMC https://sourceforge.net/projects/hwsensors3.hwsensors.p/
 * ACPIKeyboard https://bitbucket.org/RehabMan/os-x-acpi-keyboard/downloads/
 * USBInjectAll https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/
+* UVC2FaceTimeHD https://github.com/syscl/Asus-FX50J/tree/master/Kexts/UVC2FaceTimeHD.kext
+  * Чтобы кекст работал правильно, вам нужно открыть "Об этом Mac" и "Отчет о системе" и в разделах USB или Камера посмотреть ID продукта и ID производителя веб-камеры. Потом конвертировать эти значения из hex в dec (из шестнадцатиричной системы счисления в десятичную) и полученные значения вставить в соответствующие поля в `Info.plist`, который находится внутри кекста `UVC2FaceTimeHD`
+  * Это позволяет идентифицировать веб-камеру как Apple FaceTimeHD. Честно говоря и без этого кекста веб камера работала корректно (в Skype или в ScreenFlow). Каких-то видимых изменений после применения этого кекста я не заметил. FaceTime я не использую. https://www.tonymacx86.com/threads/guide-dell-xps-13-9350-macos-10-12-1.204730/post-1386360

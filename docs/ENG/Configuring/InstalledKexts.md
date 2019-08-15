@@ -14,3 +14,7 @@ Naturally for each configuration of the computer you need a set of kexts and not
 * VoodooBatterySMC https://sourceforge.net/projects/hwsensors3.hwsensors.p/
 * ACPIKeyboard https://bitbucket.org/RehabMan/os-x-acpi-keyboard/downloads/
 * USBInjectAll https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/
+* UVC2FaceTimeHD https://github.com/syscl/Asus-FX50J/tree/master/Kexts/UVC2FaceTimeHD.kext
+  - For the text to work correctly, you need to open "About This Mac" and "System Report" and in the USB or Camera sections, look at the product ID and webcam manufacturer ID. Then convert these values from hex to dec (from hexadecimal to decimal) and paste the resulting values into the appropriate fields in `Info.plist`, which is inside the `UVC2FaceTimeHD` kekst
+  - This allows you to identify the webcam as Apple FaceTimeHD. Honestly, without this kekst, the webcam worked correctly (in Skype or in ScreenFlow). I did not notice any visible changes after applying this kekst. I do not use FaceTime. https://www.tonymacx86.com/threads/guide-dell-xps-13-9350-macos-10-12-1.204730/post-1386360
+
