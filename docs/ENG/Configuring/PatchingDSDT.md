@@ -90,7 +90,7 @@ into method label UPBS code_regex (\^.*)MCUR replaceall_matched begin B1B2\(%1CU
 into method label UPBS code_regex (\^.*)MBCV replaceall_matched begin B1B2\(%1BCV0,%1BCV1\) end;
 ```
 
-But also for me the battery patch for HP 3165sf worked well. Before applying patches, save a working copy of the DSDT file.dsl in some place. You can find it and apply patches to the battery by opening the DSDT file.dsl in MaciASL by pressing the "Patch" button and in the left sidebar scrolling down to the lines that start with "[bat]". Then try to apply patches for about your laptops. Read the Beginning of each patch, because there at the top of the comments contains useful background information.
+But also for me the battery patch for HP Pavilion n012tx worked well. Before applying patches, save a working copy of the DSDT file.dsl in some place. You can find it and apply patches to the battery by opening the DSDT file.dsl in MaciASL by pressing the "Patch" button and in the left sidebar scrolling down to the lines that start with "[bat]". Then try to apply patches for about your laptops. Read the Beginning of each patch, because there at the top of the comments contains useful background information.
 
 I have a battery indicator displayed and the percentages change when charging and discharging, but it often happens that they do not change and have to reset the CMOS by pressing the power button for 15-20 seconds.
 
