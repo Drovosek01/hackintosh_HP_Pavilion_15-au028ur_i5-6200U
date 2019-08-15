@@ -94,4 +94,37 @@ But also for me the battery patch for HP 3165sf worked well. Before applying pat
 
 I have a battery indicator displayed and the percentages change when charging and discharging, but it often happens that they do not change and have to reset the CMOS by pressing the power button for 15-20 seconds.
 
+---
+
+ACPI code can use the _OSI method (implemented by the ACPI host) to check which Windows version it is running on. Most DSDT implementations will vary the USB configuration depending on the version of Windows that is running.
+
+When running OS X, none of the checks DSDT might be doing for _OSI(“Windows \<version\>”) will return true because it only responds to “Darwin”. This is the reason for the “OS Check Fix” family of DSDT patches. By patching DSDT to simulate a certain version of Windows when running Darwin, we can obtain behavior that would normally happen when running that specific version of Windows.
+
+Rehabman has already made an ACPI file with different variants of checks, but I added it a bit, because now there is already Windows 10 1903. I don't know what version it is, so I wrote "Windows 2019"in SSDT. For this SSDT file to work correctly, you need to rename all the "_OSI" methods to "XOSI" and the easiest way to do this is to make the corresponding patch in the config file.
+
+Here is a link to the file from Rehabman: https://github.com/RehabMan/OS-X-Clover-Laptop-Config/blob/master/hotpatch/SSDT-XOSI.dsl
+
+```xml
+<dict>
+  <key>Comment</key>
+  <string>change _OSI to XOSI</string>
+  <key>Disabled</key>
+  <false/>
+  <key>Find</key>
+  <data>
+  	X09TSQ==
+  </data>
+  <key>Replace</key>
+  <data>
+  	WE9TSQ==
+  </data>
+</dict>
+```
+
+Also, just in case I edited DSDT in that block of code, where there is a check of the conditions on what is the version of Windows and the first line, before the comparisons, I put what is returned, if it is "Windows 2015".
+
+Any visible changes after manipulations with "_OSI" I didn't notice.
+
+---
+
 After applying all patches in the DSDT file.dsl you need to open the "File" tab in MaciASL, choose "Save as", name the file simply DSDT and file format choose "ACPI Machine Language Binary". Then the saved DSDT file.aml needs to move to `/EFI/CLOVER/ACPI/patched` and reboot your Hackintosh.
