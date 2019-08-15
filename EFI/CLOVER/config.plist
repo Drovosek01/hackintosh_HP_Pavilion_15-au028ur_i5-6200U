@@ -216,6 +216,20 @@
 					DQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _OSI to _XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X09TSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					X1hPU0k=
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -980,7 +994,7 @@
 		<key>#NvidiaWeb</key>
 		<false/>
 		<key>InjectKexts</key>
-		<true/>
+		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
