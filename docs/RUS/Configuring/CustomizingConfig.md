@@ -69,6 +69,20 @@
 					DQ==
 					</data>
                     </dict>
+                  <dict>
+					<key>Comment</key>
+					<string>change _OSI to XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X09TSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WE9TSQ==
+					</data>
+				</dict>
                 </array>
             </dict>
             <key>SSDT</key>
@@ -82,6 +96,8 @@
                     <key>PluginType</key>
                     <true/>
                 </dict>
+                <key>PluginType</key>
+								<string>1</string>
             </dict>
         </dict>
         <key>Boot</key>
