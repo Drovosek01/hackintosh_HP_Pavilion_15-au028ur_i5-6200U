@@ -127,4 +127,18 @@ Any visible changes after manipulations with "_OSI" I didn't notice.
 
 ---
 
+As far as I know, to work correctly USB ports, especially USB 3.0, you need to remove the extra USB from the "device tree". This can be done manually using instructions from Rehabman: https://www.tonymacx86.com/threads/guide-creating-a-custom-ssdt-for-usbinjectall-kext.211311/ (also, if you Google, you can find more understandable interpretation or translation of this manual).
+
+There is another way, more simply - to generate the necessary files using the [Hackintool]((/docs/ENG/ProgramsList/HackintoshTools.md).) program.
+
+![Hackintool USB tab](https://github.com/Drovosek01/hackintosh_HP_Pavilion_15-au028ur_i5-6200U/blob/master/images/other_images/Hackintool_USB.png?raw=true)
+
+Open Hackintool, tab "USB". Takes a flash drive that supports USB 3.0 and alternately connect to all USB ports and spot what lines in the program are highlighted in green. Then takes the USB stick, which supports only USB 2.0 and also alternately connect to all USB ports.
+
+Then all the ports that neither the times were not cut green isolated and removed. (Alternately select and click on the button with the icon of the circle with a minus). Then click the Export button (it is also at the bottom of the window). Then, in the course of the dialog boxes that appear, you agree with them and choose your config file, some patches will be added to it (you can not choose a config file, but specify any folder, then create a config file exclusively with some patches and you can manually copy them). The desktop will appear .aml files and kext USBPorts. These files are placed in `/CLOVER/ACPI/patched` and `/CLOVER/kexts/Other`, respectively. Add the text USBInjectAll (although I do not know exactly whether it is necessary for these "patches") and reboot.
+
+After doing the manipulation and a few days of using Hackintosh with these cupcakes and SSDT files for USB, I did not notice any visible difference in how the Hackintosh worked before they were applied, but I did not delete them.
+
+---
+
 After applying all patches in the DSDT file.dsl you need to open the "File" tab in MaciASL, choose "Save as", name the file simply DSDT and file format choose "ACPI Machine Language Binary". Then the saved DSDT file.aml needs to move to `/EFI/CLOVER/ACPI/patched` and reboot your Hackintosh.
