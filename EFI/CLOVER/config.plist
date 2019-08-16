@@ -299,6 +299,8 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>PluginType</key>
+			<string>1</string>
 		</dict>
 	</dict>
 	<key>Boot</key>
