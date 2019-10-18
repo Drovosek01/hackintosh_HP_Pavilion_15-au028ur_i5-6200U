@@ -4,7 +4,7 @@
 
 Вы можете скачать образ диска с данным конфигом с официальной страницы загрузчика Clover: https://sourceforge.net/projects/cloverefiboot/files/Bootable_ISO/ Для распаковки .lzma и .tar файлов в Windows лучше используйте [7zip](https://www.7-zip.org/) или [Bandizip]([https://bandisoft.com/bandizip](https://www.bandisoft.com/bandizip))
 
-Вот, что я изменил в своем файле [config.plist](/EFI/CLOVER/config.plist):
+Вот, что я добавил в своем файле [config.plist](/EFI/CLOVER/config.plist), по сравнению со стандартным конфигом, который идет в [ISO](https://github.com/CloverHackyColor/CloverBootloader/releases) образе загрузчика:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -208,7 +208,7 @@
 </plist>
 ```
 
-Это не рабочий config.plist. Выше я привел только те пункты, которые были изменены по сравнению с родным конфигом из ISO образа Clover ревизии 5033.
+Это не рабочий config.plist. Выше я привел только те пункты, которые я добавил в стандартный конфиг, из [ISO](https://github.com/CloverHackyColor/CloverBootloader/releases) образа Clover ревизии 5096, но есть и пункты, которые были удалены из стандартного конфига и я не могу отобразить это каким-то правильным образом в `xml` коде. Если вы просто хотите установить хакинтош, то просто возьмите мой готовый конфиг из этого репозитория из [/EFI/CLOVER/config.plist](/EFI/CLOVER/config.plist), а если вы хотите разобраться в разнице стандартного конфига и того, который используется в этой хакинтош сборке, то вам для начала нужно прочитать книгу "[Clover цвета хаки](https://sourceforge.net/projects/cloverefiboot/files/Documents/)", чтобы понимать какие пункты в config.plist за что отвечают. После этого можно воспользоваться инструментом [diffchecker](https://www.diffchecker.com/) и в нем уже наглядно увидеть что удалено, а чтодобавлено в стандартный конфиг. Так же, чтобы сравнение в diffchecker было более точное, лучше пересохраните ваш/мой конфиг в PlistEditPro (просто откройте файл config.plist этой программой, а потом сохраните) и так же пересохраните стандартный конфиг Clover из ISO образа, а потом уже копируйте код из них. Это нужно потому, что при сохранении PlistEditPro сортирует `xml` файл и я свой config.plist уже сохранил через PlistEditPro, но стандартный config.plist в ISO образе Clover не сохранялся через PlistEditPro и если вы будете так сравнивать свой и стандартный config.plist через diffchecker, то будет найдено много "мусорных" различий, потому что одни и те же строчки могут находится в разных концах файла (образно говоря).
 
 Такой SMBIOS подойдет для загрузки, но потом лучше сгенерировать его пункты полностью, например с помощью Clover Configurator.
 

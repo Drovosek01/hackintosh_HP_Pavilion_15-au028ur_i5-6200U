@@ -4,7 +4,7 @@ Here is described how I have changed net config that goes along with Clover revi
 
 You can download the disk image with this config from the official page of the loader Clover: https://sourceforge.net/projects/cloverefiboot/files/Bootable_ISO/ For unpacking .lzma and .tar files in Windows use [7zip](https://www.7-zip.org/) or [Bandizip]([https://bandisoft.com/bandizip](https://www.bandisoft.com/bandizip))
 
-Here's what I changed in my file [config.plist](/EFI/CLOVER/config.plist):
+Here's what I added in my [config.plist](/EFI/CLOVER/config.plist), compared to the standard config that goes in [ISO](https://github.com/CloverHackyColor/CloverBootloader/releases) bootloader image:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -208,7 +208,7 @@ Here's what I changed in my file [config.plist](/EFI/CLOVER/config.plist):
 </plist>
 ```
 
-This is not a working config.plist. I brought only those items that have been modified compared to the native configuration file of the ISO image Clover revision 5033.
+This is not a working config.plist. Above I gave only those items that I added to the standard config, from [ISO](https://github.com/CloverHackyColor/CloverBootloader/releases) in Clover revision 5096, but there are also items that have been removed from the standard config and I can not display this in any correct way in the `xml` code. If you just want to install Hackintosh, then just take my ready config from this repository from [/EFI/CLOVER/config.plist](/EFI/CLOVER/config.plist), and if you want to understand the difference between the standard config and the one that is used in this Hackintosh Assembly, then you first need to read the book " [Clover of Hacky Color](https://sourceforge.net/projects/cloverefiboot/files/Documents/)" to understand which items in config.plist for that respond. You can then use the [diffchecker](https://www.diffchecker.com/) and in it already visually to see that is removed, and that is added in a standard config. Also, to make the comparison in diffchecker more accurate, it is better to resave your / my config in PlistEditPro (just open the config file.plist this program, and then save) and just resave the standard clover config from the ISO image, and then copy the code from them. This is necessary because when saving PlistEditPro sorts the `xml` file and returns its config.already saved plist using PlistEditPro, but the standard config.plist in ISO image Clover not persisted through PlistEditPro and if you will so to compare its and the standard config.plist through diffchecker, then a lot of "garbage" differences will be found, because the same lines can be located at different ends of the file (figuratively speaking)
 
 Such SMBIOS will be suitable for loading, but then it is better to generate its points completely, for example with the help of Clover Configurator.
 
