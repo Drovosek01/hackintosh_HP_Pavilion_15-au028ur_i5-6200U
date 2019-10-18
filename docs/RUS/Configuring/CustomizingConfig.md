@@ -10,66 +10,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>ACPI</key>
-        <dict>
-            <key>DSDT</key>
-            <dict>
-                <key>Fixes</key>
-                <dict>
-                    <key>AddHDMI</key>
-                    <false/>
-                    <key>FixDisplay</key>
-                    <false/>
-                </dict>
-                <key>Patches</key>
-                <array>
-                    <dict>
-                        <key>Comment</key>
-                        <string>Add _SUN property for GIGE</string>
-                        <key>Disabled</key>
-                        <false/>
-                        <key>Find</key>
-                        <data>
+<dict>
+	<key>ACPI</key>
+	<dict>
+		<key>DSDT</key>
+		<dict>
+			<key>Fixes</key>
+			<dict>
+				<key>AddHDMI</key>
+				<false/>
+				<key>FixDisplay</key>
+				<false/>
+			</dict>
+			<key>Name</key>
+			<string>DSDT.aml</string>
+			<key>Patches</key>
+			<array>
+				<dict>
+					<key>Comment</key>
+					<string>Add _SUN property for GIGE</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
 					UFhTWAhfQURSAAhfUFJXEgYC
 					</data>
-                        <key>Replace</key>
-                        <data>
+					<key>Replace</key>
+					<data>
 					UFhTWAhfQURSAAhfU1VOCgQIX1BSVxIGAg==
 					</data>
-                    </dict>
-                    <dict>
-                        <key>Comment</key>
-                        <string>Rename HDEF to AZAL</string>
-                        <key>Disabled</key>
-                        <false/>
-                        <key>Find</key>
-                        <data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename HDEF to AZAL</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
 					SERFRg==
 					</data>
-                        <key>Replace</key>
-                        <data>
+					<key>Replace</key>
+					<data>
 					QVpBTA==
 					</data>
-                    </dict>
-                    <dict>
-                        <key>Comment</key>
-                        <string>NVOP</string>
-                        <key>Disabled</key>
-                        <true/>
-                        <key>Find</key>
-                        <data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>NVOP</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
 					W4EOUENBUAMAQAhMQ1RMEBQfX0lOSQBwAFwv
 					BV9TQl9QQ0kwUlAwNVBYU1hfQURSFEAN
 					</data>
-                        <key>Replace</key>
-                        <data>
+					<key>Replace</key>
+					<data>
 					W4EOUENBUAMAQAhMQ1RMEBQjX0lOSQBwAFwv
 					BV9TQl9QQ0kwUlAwNVBYU1hfQURSX09GRhRA
 					DQ==
 					</data>
-                    </dict>
-                  <dict>
+				</dict>
+				<dict>
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
@@ -83,128 +85,190 @@
 					WE9TSQ==
 					</data>
 				</dict>
-                </array>
-            </dict>
-            <key>SSDT</key>
-            <dict>
-                <key>Generate</key>
-                <dict>
-                    <key>CStates</key>
-                    <false/>
-                    <key>PStates</key>
-                    <false/>
-                    <key>PluginType</key>
-                    <true/>
-                </dict>
-                <key>PluginType</key>
-								<string>1</string>
-            </dict>
-        </dict>
-        <key>Boot</key>
-        <dict>
-            <key>Arguments</key>
-            <string>uia_exclude=HS07 darkwake=0</string>
-            <key>HibernationFixup</key>
-            <false/>
-            <key>RtcHibernateAware</key>
-            <true/>
-            <key>Timeout</key>
-            <integer>3</integer>
-        </dict>
-        <key>Devices</key>
-        <dict>
-            <key>Properties</key>
-            <dict>
-                <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-                <dict>
-                    <key>AAPL,ig-platform-id</key>
-                    <data>
+			</array>
+		</dict>
+		<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
+		</array>
+		<key>SSDT</key>
+		<dict>
+			<key>Generate</key>
+			<dict>
+				<key>CStates</key>
+				<false/>
+				<key>PStates</key>
+				<false/>
+				<key>PluginType</key>
+				<true/>
+			</dict>
+			<key>PluginType</key>
+			<string>1</string>
+		</dict>
+	</dict>
+	<key>Boot</key>
+	<dict>
+		<key>Arguments</key>
+		<string>uia_exclude=HS07 darkwake=0</string>
+		<key>HibernationFixup</key>
+		<false/>
+		<key>RtcHibernateAware</key>
+		<true/>
+		<key>Timeout</key>
+		<integer>3</integer>
+	</dict>
+	<key>Devices</key>
+	<dict>
+		<key>Audio</key>
+		<dict>
+			<key>Inject</key>
+			<integer>13</integer>
+		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
 				AAAWGQ==
 				</data>
-                    <key>device-id</key>
-                    <data>
+				<key>device-id</key>
+				<data>
 				FhkAAA==
 				</data>
-                    <key>disable-external-gpu</key>
-                    <data>
+				<key>disable-external-gpu</key>
+				<data>
 				AQAAAA==
 				</data>
-                    <key>framebuffer-fbmem</key>
-                    <data>
+				<key>framebuffer-fbmem</key>
+				<data>
 				AACQAA==
 				</data>
-                    <key>framebuffer-patch-enable</key>
-                    <data>
+				<key>framebuffer-patch-enable</key>
+				<data>
 				AQAAAA==
 				</data>
-                    <key>framebuffer-stolenmem</key>
-                    <data>
+				<key>framebuffer-stolenmem</key>
+				<data>
 				AAAwAQ==
 				</data>
-                    <key>model</key>
-                    <string>Intel HD Graphics 520</string>
-                </dict>
-            </dict>
-            <key>Audio</key>
-            <dict>
-                <key>Inject</key>
-                <integer>13</integer>
-            </dict>
-            <key>SetIntelBacklight</key>
-            <true/>
-        </dict>
-        <key>GUI</key>
-        <dict>
-            <key>Hide</key>
-            <array>
-                <string>Preboot</string>
-                <string>Recovery</string>
-                <string>Legacy HD</string>
-            </array>
-            <key>Language</key>
-            <string>ru:0</string>
-            <key>Mouse</key>
-            <dict>
-                <key>Enabled</key>
-                <true/>
-                <key>Mirror</key>
-                <false/>
-                <key>Speed</key>
-                <integer>8</integer>
-            </dict>
-            <key>ScreenResolution</key>
-            <string>1920x1080</string>
-            <key>Theme</key>
-            <string>Mojave</string>
-        </dict>
-        <key>Graphics</key>
-        <dict>
-            <key>Inject</key>
-            <dict>
-                <key>ATI</key>
-                <false/>
-                <key>Intel</key>
-                <false/>
-                <key>NVidia</key>
-                <false/>
-            </dict>
-        </dict>
-        <key>KernelAndKextPatches</key>
-        <dict>
-            <key>KernelPm</key>
-            <true/>
-        </dict>
-        <key>SMBIOS</key>
-        <dict>
-            <key>ProductName</key>
-            <string>MacBookPro13,1</string>
-        </dict>
-        <key>SystemParameters</key>
-        <dict>
-            <key>InjectKexts</key>
-            <true/>
-        </dict>
-    </dict>
+				<key>model</key>
+				<string>Intel HD Graphics 520</string>
+			</dict>
+		</dict>
+		<key>SetIntelBacklight</key>
+		<true/>
+	</dict>
+	<key>GUI</key>
+	<dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+			<string>Recovery</string>
+			<string>Legacy HD</string>
+		</array>
+		<key>Language</key>
+		<string>ru:0</string>
+		<key>Mouse</key>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Mirror</key>
+			<false/>
+			<key>Speed</key>
+			<integer>8</integer>
+		</dict>
+		<key>PlayAsync</key>
+		<true/>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
+		<key>Theme</key>
+		<string>Mojave</string>
+	</dict>
+	<key>Graphics</key>
+	<dict>
+		<key>Inject</key>
+		<dict>
+			<key>ATI</key>
+			<false/>
+			<key>Intel</key>
+			<false/>
+			<key>NVidia</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>KernelAndKextPatches</key>
+	<dict>
+		<key>AppleIntelCPUPM</key>
+		<false/>
+		<key>KernelPm</key>
+		<true/>
+	</dict>
+	<key>RtVariables</key>
+	<dict>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
+		<key>MLB</key>
+		<string>C02630130GUHMHKAD</string>
+	</dict>
+	<key>SMBIOS</key>
+	<dict>
+		<key>BiosReleaseDate</key>
+		<string>05/25/2019</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>MBP131.88Z.F000.B00.1905251430</string>
+		<key>Board-ID</key>
+		<string>Mac-473D31EABEB93F9B</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C02743270QXHMHK1M</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>MacBook-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>234.0.0.0.0</string>
+		<key>Family</key>
+		<string>MacBook Pro</string>
+		<key>FirmwareFeatures</key>
+		<string>0xFC0FE137</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
+		<true/>
+		<key>PlatformFeature</key>
+		<string>0x1A</string>
+		<key>ProductName</key>
+		<string>MacBookPro13,1</string>
+		<key>SerialNumber</key>
+		<string>C02VL0YMGVC1</string>
+		<key>SmUUID</key>
+		<string>189518EF-D1DD-4B32-A197-78E35BE4D1D0</string>
+		<key>Version</key>
+		<string>1.0</string>
+	</dict>
+	<key>SystemParameters</key>
+	<dict>
+		<key>InjectKexts</key>
+		<string>Yes</string>
+	</dict>
+</dict>
 </plist>
 ```
 
